@@ -1,16 +1,31 @@
-export const App = () => {
+import { lazy } from 'react';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import { SharedLayout } from './SharedLayout/SharedLayout';
+//css//
+
+const Home = lazy(() => import('./pages/Home'));
+const Movies = lazy(() => import('./pages/Movies'));
+//moviedetails//
+//cast//
+//reviews//
+
+function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/movies/:movieId" element={<MovieDetails />}>
+            <Route path="cast" element={<Cast />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
+        </Route>
+
+        <Route path="*" element={<Navigate to="/" />}></Route>
+      </Routes>
+    </>
   );
-};
+}
+
+export default App;
