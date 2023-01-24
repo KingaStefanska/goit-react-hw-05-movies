@@ -14,7 +14,7 @@ const useTrending = () => {
   return (
     <>
       <h1 className={css.pageTitle}>Treading today</h1>
-      <ul>
+      <ul className={css.ul}>
         {trendingMovies.map(movie => (
           <li className={css.li} key={movie.id}>
             <NavLink to={`/movies/${movie.id}`} state={{ from: location }}>
