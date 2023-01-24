@@ -18,10 +18,10 @@ nav {
   padding: 8px 16px;
   font-weight: 500;
   font-size: larger;
-  background-color: rgb(47, 219, 138);
-  color: rgb(95, 168, 232);
+  background-color: rgb(17, 19, 18);
+  color: rgb(142, 158, 173);
   border-radius: 5px;
-  box-shadow: 2px 2px 2px 2px rgb(128, 239, 189);
+  box-shadow: 2px 2px 2px 2px rgb(127, 129, 129);
   width: 60px;
   height: 30px;
 }
