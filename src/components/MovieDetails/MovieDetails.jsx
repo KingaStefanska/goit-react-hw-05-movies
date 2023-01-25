@@ -50,7 +50,7 @@ const MovieDetails = () => {
       </div>
       <div>
         <h2 className={css.h2}>Additional information</h2>
-        <ul>
+        <ul className={css.ul}>
           <li>
             <Link className={css.link} to={'cast'}>
               Cast

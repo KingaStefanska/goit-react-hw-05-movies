@@ -13,7 +13,7 @@ const useTrending = () => {
 
   return (
     <>
-      <h1 className={css.pageTitle}>Trending today</h1>
+      <h1 className={css.page_title}>Trending today</h1>
       <ul className={css.ul}>
         {trendingMovies.map(movie => (
           <li className={css.li} key={movie.id}>
