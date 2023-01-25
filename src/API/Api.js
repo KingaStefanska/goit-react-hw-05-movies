@@ -18,7 +18,7 @@ export const getQuery = async query => {
 
 export const getDetails = async movieId => {
   const response = await axios.get(`movie/${movieId}?api_key=${API_KEY}`);
-  return response.data.results;
+  return response.data;
 };
 
 export const getCast = async movieId => {

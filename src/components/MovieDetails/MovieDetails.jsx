@@ -1,8 +1,7 @@
 import { Suspense, useRef } from 'react';
 import { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation, useParams } from 'react-router-dom';
-import getDetails from 'API/Api';
-import PropTypes from 'prop-types';
+import { getDetails } from 'API/Api';
 import css from './MovieDetails.module.css';
 
 const MovieDetails = () => {
@@ -72,7 +71,3 @@ const MovieDetails = () => {
 };
 
 export default MovieDetails;
-
-MovieDetails.propTypes = {
-  movieId: PropTypes.string.isRequired,
-};
