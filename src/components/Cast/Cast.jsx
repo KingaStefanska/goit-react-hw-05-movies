@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import getCast from 'API/Api';
-import PropTypes from 'prop-types';
+import { getCast } from 'API/Api';
 import css from './Cast.module.css';
 
 const Cast = () => {
@@ -40,7 +39,3 @@ const Cast = () => {
 };
 
 export default Cast;
-
-Cast.propTypes = {
-  movieId: PropTypes.string.isRequired,
-};

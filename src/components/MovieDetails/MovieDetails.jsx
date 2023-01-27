@@ -8,7 +8,7 @@ const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
   const location = useLocation();
-  const backLink = useRef(location.state.from ?? '/');
+  const backLink = useRef(location.state?.from ?? '/');
 
   useEffect(() => {
     getDetails(movieId).then(setMovie);
